@@ -1,0 +1,124 @@
+1. Write a Method that accepts an Array and returns the sum of all the elements of array. (Java)
+
+Ans: -->
+public class returnSumOfArrayElements {
+
+public static void main(String[] args) {
+int [] a = {1,2,3,4,5};
+int sum = SumofArray(a);
+
+System.out.println(sum);
+}
+public static int SumofArray(int[] a) {
+int sum =0;
+for(int i =0;i<=a.length-1;i++) {
+sum =sum +a[i];
+}
+return sum;
+}
+}
+
+Input: int [] a = {1,2,3,4,5};
+Output: The sum of all the elements of array is 15
+
+Problem 2. Print the multiplication of two numbers without using the multiplication operator.
+
+Here We have to multiply ant two numbers without using the multiplication operator.
+
+Like 4,2 two numbers,
+4*2=8
+But we have to do this without using '*' So 4*2 we can write adding 4 times 2
+2+2+2+2= 8
+The result will be the same.
+
+Solution : -->
+
+public class multiplicationTableWithoutMultiplyOperator {
+public static void main(String[] args) {
+int result = multiply(5,10);
+System.out.println(result);
+}
+public static int multiply(int i, int j) {
+int k= 1;
+int sum =0;
+while(k<=j){
+sum = sum + i;
+k++;
+}
+return sum;
+}
+}
+
+Input : muptiply 5,10
+Output: 50
+
+Problem 3 :
+
+a []= {2,4,6,12,20,39};
+
+3. Find the difference between array elements, then find out the Maximum of it.
+
+Here
+4-2=2
+6-4=2
+12-6=6
+20-12=8
+39-20=19
+
+Diff of adjacent elements = {2,2,6,8,19};
+Maxm = 19
+
+
+Solution:
+
+public class maxDifferenceAnyAdjacentIndexArray {
+
+public static void main(String[] args) {
+int [] a = {2,4,6,12,20,39};
+int diff =0;
+for(int i = 0; i<a.length-1; i++)
+{
+if(a[i+1]- a[i] > diff )
+{
+diff =a[i+1]- a[i];
+}
+
+}
+System.out.println(diff);
+
+}
+
+}
+
+Problem 4: Sort the Array in Ascending and Descending Order.
+
+Solution:
+public class sortingArray {
+
+public static void main(String[] args) {
+int [] arr = {9,1,7,3,4,2};
+int temp;
+
+for(int i=0; i<=arr.length-1; i++) {
+
+for(int j= i+1; j<=arr.length-1;j++)
+{
+//swap the value
+
+if(arr[i]>arr[j]) {
+temp =arr[i];
+arr[i]=arr[j];
+arr[j]=temp;
+
+}
+}
+}
+
+for(int i= 0; i <=arr.length-1;i++)
+{
+System.out.print(arr[i] + " ");
+}
+
+}
+
+}
